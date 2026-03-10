@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///C:/Users/ourob/Downloads/index%20(2).html -->
+<!-- saved from url=(0049)file:///C:/Users/ourob/Downloads/index%20(3).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -497,6 +497,94 @@
     transform: none;
   }
 
+  /* SYSTEMS I BUILD */
+  .systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--border);
+  }
+
+  .system-card {
+    background: var(--surface);
+    padding: 2rem;
+    transition: background 0.2s;
+  }
+
+  .system-card:hover { background: var(--surface2); }
+
+  .system-icon {
+    font-size: 1.4rem;
+    color: var(--accent2);
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .system-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
+  }
+
+  .system-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* CASE STUDY LAYOUT */
+  .case-study-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .case-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 0.5rem;
+  }
+
+  .case-text {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .case-outcomes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .case-outcomes li {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .case-outcomes li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .case-study-body { grid-template-columns: 1fr; gap: 1.25rem; }
+    .systems-grid { grid-template-columns: 1fr; }
+  }
+
   /* DIVIDER */
   .divider {
     border: none;
@@ -523,26 +611,29 @@
 <nav>
   <span class="nav-brand">Que Armendariz</span>
   <ul class="nav-links">
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(2).html#about">About</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(2).html#work">Work</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(2).html#philosophy">Approach</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(2).html#contact">Contact</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#about">About</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#systems">Systems</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#work">Case Studies</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#philosophy">Approach</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <p class="hero-label">AI Governance · Systems Design · Operational Clarity</p>
+  <p class="hero-label">AI Systems Builder · Automation · Governance</p>
   <h1>Building systems<br>that <em>hold</em>.</h1>
   <p class="hero-desc">
-    I design AI-adjacent systems where governance is built in from the start —
-    not bolted on after. Every artifact here is a working system, not a concept.
+    I design reliable AI and automation systems that turn messy real-world processes
+    into predictable, auditable pipelines. My work focuses on idempotent job execution,
+    AI governance frameworks, and production-ready automation — systems built to behave
+    the same way every time they run.
   </p>
   <div class="hero-pills">
-    <span class="pill active">Workflow Governance</span>
-    <span class="pill active">Idempotency</span>
-    <span class="pill active">Decision Systems</span>
-    <span class="pill">Python · SQLite</span>
+    <span class="pill active">Idempotent Job Systems</span>
+    <span class="pill active">AI Governance Frameworks</span>
+    <span class="pill active">Automation Pipelines</span>
+    <span class="pill">Python · SQLite · Deno · Supabase</span>
     <span class="pill">Remote · Open to Collaborate</span>
   </div>
 </div>
@@ -594,24 +685,64 @@
 
 <hr class="divider">
 
+<!-- SYSTEMS I BUILD -->
+<section id="systems">
+  <p class="section-label reveal">Capabilities</p>
+  <h2 class="section-title reveal">Systems I Build</h2>
+  <div class="systems-grid">
+    <div class="system-card reveal">
+      <div class="system-icon">⬡</div>
+      <h3 class="system-name">AI Governance Frameworks</h3>
+      <p class="system-desc">Operational rules that ensure AI systems behave predictably and safely — not personality-driven, but constraint-enforced.</p>
+    </div>
+    <div class="system-card reveal">
+      <div class="system-icon">⟳</div>
+      <h3 class="system-name">Idempotent Job Systems</h3>
+      <p class="system-desc">Task pipelines designed to prevent duplicate execution and lost work, even under retries, crashes, and concurrent workers.</p>
+    </div>
+    <div class="system-card reveal">
+      <div class="system-icon">⇉</div>
+      <h3 class="system-name">Automation Pipelines</h3>
+      <p class="system-desc">Systems that convert complex, messy processes into reliable, auditable automated workflows with deterministic outcomes.</p>
+    </div>
+    <div class="system-card reveal">
+      <div class="system-icon">◈</div>
+      <h3 class="system-name">Deal &amp; Workflow Governance</h3>
+      <p class="system-desc">Decision-focused dashboards that enforce stage rules, block invalid transitions, and surface next actions — without interpretation required.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
 <!-- WORK / ARTIFACTS -->
 <section id="work">
-  <p class="section-label reveal">Artifacts</p>
+  <p class="section-label reveal">Case Studies</p>
   <h2 class="section-title reveal">Four systems.<br>Each one ships.</h2>
 
   <div class="artifact-grid">
 
-    <!-- ARTIFACT 1: Ranch Sale Dashboard -->
+    <!-- CASE STUDY 1: Ranch Sale Dashboard -->
     <div class="artifact-card reveal">
-      <div class="artifact-num">ARTIFACT 01 — DEAL GOVERNANCE</div>
+      <div class="artifact-num">CASE STUDY 01 — DEAL GOVERNANCE</div>
       <h3 class="artifact-title">Ranch Sale Dashboard</h3>
       <p class="artifact-tagline">Operational clarity for a real-world land transaction</p>
-      <p class="artifact-desc">
-        A decision-focused dashboard that governs a multi-stage real estate transaction.
-        The system enforces document requirements at each stage, blocks invalid state transitions,
-        detects workflow delays, and surfaces the next action and responsible party — immediately,
-        without interpretation required.
-      </p>
+      <div class="case-study-body">
+        <div class="case-col">
+          <div class="case-label">Problem</div>
+          <p class="case-text">Multi-stage real estate deals have no enforcement layer — document gaps, missed deadlines, and unclear responsibility cause deals to stall or collapse silently.</p>
+          <div class="case-label" style="margin-top:1rem;">Solution</div>
+          <p class="case-text">A governance-driven dashboard that enforces document requirements at each stage, blocks invalid transitions, detects delays, and surfaces the next action and responsible party — immediately.</p>
+        </div>
+        <div class="case-col">
+          <div class="case-label">Outcome</div>
+          <ul class="case-outcomes">
+            <li>No stage advances without verified documents</li>
+            <li>Delays surfaced automatically, not discovered manually</li>
+            <li>1031 deadlines tracked with zero ambiguity</li>
+          </ul>
+        </div>
+      </div>
       <div class="artifact-tags">
         <span class="tag">Python</span>
         <span class="tag">Streamlit</span>
@@ -639,17 +770,27 @@
       </div>
     </div>
 
-    <!-- ARTIFACT 2: Idempotent Job System -->
+    <!-- CASE STUDY 2: Idempotent Job System -->
     <div class="artifact-card reveal">
-      <div class="artifact-num">ARTIFACT 02 — EXECUTION INTEGRITY</div>
+      <div class="artifact-num">CASE STUDY 02 — EXECUTION INTEGRITY</div>
       <h3 class="artifact-title">Idempotent Job System</h3>
       <p class="artifact-tagline">Exactly-once execution, even under retries and failures</p>
-      <p class="artifact-desc">
-        A job execution system that guarantees duplicate requests never produce duplicate outcomes.
-        Workers claim jobs via lease to prevent concurrent execution. Side effects are captured
-        in an outbox before delivery, ensuring external actions — like sending a notification —
-        happen exactly once regardless of retries or failures.
-      </p>
+      <div class="case-study-body">
+        <div class="case-col">
+          <div class="case-label">Problem</div>
+          <p class="case-text">Automation systems break when retries occur or workers fail — duplicate jobs run, notifications send twice, and state becomes inconsistent with no recovery path.</p>
+          <div class="case-label" style="margin-top:1rem;">Solution</div>
+          <p class="case-text">A job system built around idempotency keys, lease-based worker claiming, and an outbox pattern that isolates side effects — guaranteeing each job runs exactly once regardless of failure conditions.</p>
+        </div>
+        <div class="case-col">
+          <div class="case-label">Outcome</div>
+          <ul class="case-outcomes">
+            <li>Duplicate requests never produce duplicate outcomes</li>
+            <li>Workers cannot concurrently claim the same job</li>
+            <li>External actions fire exactly once, even on retry</li>
+          </ul>
+        </div>
+      </div>
       <div class="artifact-tags">
         <span class="tag">Python</span>
         <span class="tag">SQLite</span>
@@ -676,17 +817,27 @@
       </div>
     </div>
 
-    <!-- ARTIFACT 3: AI Governance Spec -->
+    <!-- CASE STUDY 3: AI Governance Spec -->
     <div class="artifact-card reveal">
-      <div class="artifact-num">ARTIFACT 03 — AI BEHAVIOR GOVERNANCE</div>
+      <div class="artifact-num">CASE STUDY 03 — AI BEHAVIOR GOVERNANCE</div>
       <h3 class="artifact-title">Structural Discipline Spec</h3>
       <p class="artifact-tagline">Formal governance rules for AI assistant behavior</p>
-      <p class="artifact-desc">
-        A written specification that defines how an AI assistant must behave under governance constraints —
-        covering correction protocols, response structure, forbidden behaviors, and evaluation standards.
-        Built to demonstrate that AI behavior can be made consistent and accountable through explicit,
-        enforceable rules rather than vague prompting.
-      </p>
+      <div class="case-study-body">
+        <div class="case-col">
+          <div class="case-label">Problem</div>
+          <p class="case-text">Most AI governance exists only as policy documents. They rarely translate into operational behavior — leaving AI systems personality-driven rather than constraint-enforced.</p>
+          <div class="case-label" style="margin-top:1rem;">Solution</div>
+          <p class="case-text">A written specification defining correction protocols, response structure, forbidden behaviors, and evaluation standards — built to make AI behavior consistent and accountable through explicit, enforceable rules.</p>
+        </div>
+        <div class="case-col">
+          <div class="case-label">Outcome</div>
+          <ul class="case-outcomes">
+            <li>AI behavior measurable per response, not per impression</li>
+            <li>5 explicit protocols replace vague prompting</li>
+            <li>Framework is testable, not aspirational</li>
+          </ul>
+        </div>
+      </div>
       <div class="artifact-tags">
         <span class="tag">AI Governance</span>
         <span class="tag">Behavioral Spec</span>
@@ -713,17 +864,28 @@
       </div>
     </div>
 
+    <!-- CASE STUDY 4: Cohabra -->
     <div class="artifact-card reveal">
-      <div class="artifact-num">ARTIFACT 04 — FULL-STACK SYSTEM DESIGN</div>
+      <div class="artifact-num">CASE STUDY 04 — FULL-STACK SYSTEM DESIGN</div>
       <h3 class="artifact-title">Cohabra</h3>
-      <p class="artifact-tagline">Website-to-mobile-app conversion pipeline with full governance stack</p>
-      <p class="artifact-desc">
-        A production-grade automated pipeline that converts any website into a React/Capacitor
-        mobile app. Governs the full lifecycle — submission through crawling, scaffold generation,
-        client portal, Stripe payment, and app store submission — with lease-based concurrency,
-        an outbox pattern for exactly-once email delivery, idempotency at every layer, RBAC admin
-        access, and configurable governance rules.
-      </p>
+      <p class="artifact-tagline">Reliable app conversion pipeline with full governance stack</p>
+      <div class="case-study-body">
+        <div class="case-col">
+          <div class="case-label">Problem</div>
+          <p class="case-text">Turning websites into mobile apps sounds simple until real-world issues appear: workers duplicate builds, systems crash mid-conversion, customers never receive confirmations, and processing becomes unpredictable under load.</p>
+          <div class="case-label" style="margin-top:1rem;">Solution</div>
+          <p class="case-text">A governance-driven pipeline covering the full lifecycle — crawling through scaffold generation, Stripe payment, client portal, and app store submission — with idempotency at every layer, lease-based concurrency, outbox email delivery, and RBAC admin access.</p>
+        </div>
+        <div class="case-col">
+          <div class="case-label">Outcome</div>
+          <ul class="case-outcomes">
+            <li>No duplicate builds under any retry condition</li>
+            <li>No lost jobs — deterministic processing under load</li>
+            <li>9 governed pipeline states with clear transitions</li>
+            <li>18 deployed edge function contracts</li>
+          </ul>
+        </div>
+      </div>
       <div class="artifact-tags">
         <span class="tag">Deno Edge Functions</span>
         <span class="tag">Postgres</span>
