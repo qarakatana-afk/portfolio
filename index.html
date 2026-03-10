@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)file:///C:/Users/ourob/Downloads/index%20(3).html -->
+<!-- saved from url=(0049)file:///C:/Users/ourob/Downloads/index%20(5).html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -422,6 +422,69 @@
     line-height: 1.7;
   }
 
+  /* CURRENT PROJECT - COHABRA */
+  .cohabra-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .cohabra-lead {
+    font-size: 1rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .pipeline-label, .cohabra-meta-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .pipeline-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pipeline-step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.85rem 1.25rem;
+  }
+
+  .step-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--accent2);
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+  }
+
+  .step-name {
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+
+  .pipeline-arrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--border);
+    padding: 0.1rem 0 0.1rem 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .cohabra-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
   /* CONTACT */
   .contact-box {
     background: var(--surface);
@@ -496,6 +559,43 @@
     opacity: 1;
     transform: none;
   }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.6s 1s forwards;
+  }
+
+  .cta-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.5rem;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .cta-primary {
+    background: var(--accent);
+    color: #f0ece3;
+    border: 1px solid var(--accent);
+  }
+
+  .cta-primary:hover { opacity: 0.85; }
+
+  .cta-ghost {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+
+  .cta-ghost:hover { color: var(--text); border-color: var(--muted); }
 
   /* SYSTEMS I BUILD */
   .systems-grid {
@@ -611,11 +711,12 @@
 <nav>
   <span class="nav-brand">Que Armendariz</span>
   <ul class="nav-links">
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#about">About</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#systems">Systems</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#work">Case Studies</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#philosophy">Approach</a></li>
-    <li><a href="file:///C:/Users/ourob/Downloads/index%20(3).html#contact">Contact</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(5).html#about">About</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(5).html#systems">Systems</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(5).html#work">Case Studies</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(5).html#current">Cohabra</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(5).html#philosophy">Philosophy</a></li>
+    <li><a href="file:///C:/Users/ourob/Downloads/index%20(5).html#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -635,6 +736,12 @@
     <span class="pill active">Automation Pipelines</span>
     <span class="pill">Python · SQLite · Deno · Supabase</span>
     <span class="pill">Remote · Open to Collaborate</span>
+  </div>
+  <div class="hero-ctas">
+    <a href="https://github.com/qarakatana-afk" target="_blank" class="cta-btn cta-ghost">GitHub →</a>
+    <a href="https://www.linkedin.com/in/que-armendariz-5606243ab/" target="_blank" class="cta-btn cta-ghost">LinkedIn →</a>
+    <a href="file:///C:/Users/ourob/Downloads/index%20(5).html#work" class="cta-btn cta-primary">Case Studies →</a>
+    <a href="file:///C:/Users/ourob/Downloads/index%20(5).html#contact" class="cta-btn cta-ghost">Contact →</a>
   </div>
 </div>
 
@@ -923,10 +1030,62 @@
 
 <hr class="divider">
 
+<!-- CURRENT PROJECT -->
+<section id="current">
+  <p class="section-label reveal">Current Project</p>
+  <h2 class="section-title reveal">Cohabra —<br><em>Automated App Factory</em></h2>
+  <div class="cohabra-grid">
+    <div class="cohabra-desc reveal">
+      <p class="cohabra-lead">Cohabra converts any website into a deployable mobile application — governed end-to-end with the same reliability principles applied across all my systems.</p>
+      <div class="cohabra-pipeline">
+        <div class="pipeline-label">Pipeline</div>
+        <div class="pipeline-steps">
+          <div class="pipeline-step"><span class="step-num">01</span><span class="step-name">Crawl website</span></div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step"><span class="step-num">02</span><span class="step-name">Extract structured content</span></div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step"><span class="step-num">03</span><span class="step-name">Generate application scaffold</span></div>
+          <div class="pipeline-arrow">↓</div>
+          <div class="pipeline-step"><span class="step-num">04</span><span class="step-name">Package into installable mobile app</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="cohabra-meta reveal">
+      <div class="cohabra-focus">
+        <div class="cohabra-meta-label">Focus</div>
+        <ul class="case-outcomes">
+          <li>Reliable automation — no partial builds</li>
+          <li>Deterministic processing under load</li>
+          <li>Idempotency at every pipeline layer</li>
+          <li>Exactly-once email delivery via outbox</li>
+        </ul>
+      </div>
+      <div class="cohabra-tech" style="margin-top:1.75rem;">
+        <div class="cohabra-meta-label">Tech</div>
+        <div class="artifact-tags" style="margin-top:0.5rem; margin-bottom:0;">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Capacitor</span>
+          <span class="tag">Deno</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Stripe</span>
+          <span class="tag">Firecrawl</span>
+        </div>
+      </div>
+      <div style="margin-top:1.75rem;">
+        <a href="https://github.com/qarakatana-afk/-Cohabra-App-Factory-Governance-Case-Study" target="_blank" class="cta-btn cta-primary">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
 <!-- PHILOSOPHY -->
 <section id="philosophy">
-  <p class="section-label reveal">Approach</p>
-  <h2 class="section-title reveal">How I think<br>about systems.</h2>
+  <p class="section-label reveal">Engineering Philosophy</p>
+  <h2 class="section-title reveal">Reliable systems come<br>from clear constraints.</h2>
   <div class="philosophy-list">
     <div class="philosophy-item reveal">
       <div class="phi-num">01</div>
@@ -935,8 +1094,8 @@
     </div>
     <div class="philosophy-item reveal">
       <div class="phi-num">02</div>
-      <h3 class="phi-title">Decision clarity over data display</h3>
-      <p class="phi-body">A dashboard that shows everything is a dashboard that tells you nothing. Every interface I build answers one question first: what needs to happen right now, and who is responsible.</p>
+      <h3 class="phi-title">Deterministic execution over optimistic assumptions</h3>
+      <p class="phi-body">Good software should behave the same way every time it runs. Idempotency, lease locking, and outbox delivery aren't optimizations — they're the baseline for systems that operate under real-world conditions.</p>
     </div>
     <div class="philosophy-item reveal">
       <div class="phi-num">03</div>
